@@ -1,0 +1,61 @@
+{
+    "name": "@rawify/unionfind",
+    "title": "UnionFind.js",
+    "version": "0.0.1",
+    "homepage": "https://github.com/rawify/UnionFind.js",
+    "bugs": "https://github.com/rawify/UnionFind.js/issues",
+    "description": "The RAW union find (disjoint set) library",
+    "keywords": [
+        "union-find",
+        "unionfind",
+        "disjoint-set",
+        "disjoint set union",
+        "graph algorithms",
+        "path compression",
+        "data structure",
+        "algorithms"
+    ],
+    "private": false,
+    "main": "./dist/unionfind.js",
+    "module": "./dist/unionfind.mjs",
+    "types": "./unionfind.d.ts",
+    "browser": "./dist/unionfind.min.js",
+    "unpkg": "./dist/unionfind.min.js",
+    "readmeFilename": "README.md",
+    "exports": {
+        ".": {
+            "types": "./unionfind.d.ts",
+            "require": "./dist/unionfind.js",
+            "import": "./dist/unionfind.mjs"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:rawify/UnionFind.js.git"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/rawify"
+    },
+    "author": {
+        "name": "Robert Eisele",
+        "email": "robert@raw.org",
+        "url": "https://raw.org/"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": "*"
+    },
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "mocha tests/*",
+        "build": "crude-build UnionFind"
+    },
+    "devDependencies": {
+        "chai": "^5.2.1",
+        "crude-build": "^0.1.0",
+        "mocha": "^11.7.1"
+    }
+}
