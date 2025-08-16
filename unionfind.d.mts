@@ -61,4 +61,4 @@ declare class UnionFind {
     readonly length: number;
 }
 
-export = UnionFind;
+export { UnionFind as default, UnionFind };

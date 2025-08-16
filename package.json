@@ -1,10 +1,10 @@
 {
     "name": "@rawify/unionfind",
     "title": "UnionFind.js",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "description": "The RAW union find (disjoint set) library",
     "homepage": "https://github.com/rawify/UnionFind.js",
     "bugs": "https://github.com/rawify/UnionFind.js/issues",
-    "description": "The RAW union find (disjoint set) library",
     "keywords": [
         "union-find",
         "unionfind",
@@ -18,17 +18,38 @@
     "private": false,
     "main": "./dist/unionfind.js",
     "module": "./dist/unionfind.mjs",
-    "types": "./unionfind.d.ts",
     "browser": "./dist/unionfind.min.js",
     "unpkg": "./dist/unionfind.min.js",
-    "readmeFilename": "README.md",
+    "types": "./unionfind.d.ts",
     "exports": {
         ".": {
-            "types": "./unionfind.d.ts",
-            "require": "./dist/unionfind.js",
-            "import": "./dist/unionfind.mjs"
+            "import": {
+                "types": "./unionfind.d.mts",
+                "default": "./dist/unionfind.mjs"
+            },
+            "require": {
+                "types": "./unionfind.d.ts",
+                "default": "./dist/unionfind.js"
+            },
+            "browser": {
+                "types": "./unionfind.d.ts",
+                "default": "./dist/unionfind.min.js"
+            },
+            "default": {
+                "types": "./unionfind.d.ts",
+                "default": "./dist/unionfind.js"
+            }
+        },
+        "./package.json": "./package.json"
+    },
+    "typesVersions": {
+        "<4.7": {
+            "*": [
+                "unionfind.d.ts"
+            ]
         }
     },
+    "sideEffects": false,
     "repository": {
         "type": "git",
         "url": "git@github.com:rawify/UnionFind.js.git"
