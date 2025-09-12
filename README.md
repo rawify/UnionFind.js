@@ -139,7 +139,7 @@ console.log(uf.connected(0, 3)); // true
 
 ## Coding Style
 
-As with every library I publish, UnionFind.js is written to be as small and efficient as possible after compression with Google Closure Compiler in advanced mode. Please preserve this style if you plan to extend the library.
+Like all my libraries, UnionFind.js is written to minimize size after compression with Google Closure Compiler in advanced mode. The code style is optimized to maximize compressibility. If you extend the library, please preserve this style.
 
 ## Building the library
 
