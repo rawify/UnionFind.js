@@ -55,7 +55,7 @@ const components = new UnionFind(10);
 ### Standalone browser script
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.1.0/dist/unionfind.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.1.1/dist/unionfind.min.js"></script>
 <script>
 	const components = new UnionFind(10);
 </script>
@@ -65,7 +65,7 @@ const components = new UnionFind(10);
 
 ```html
 <script type="module">
-	import UnionFind from 'https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.1.0/dist/unionfind.mjs';
+	import UnionFind from 'https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.1.1/dist/unionfind.mjs';
 	const components = new UnionFind(10);
 </script>
 ```
@@ -145,7 +145,7 @@ uf.length; // 10
 
 Each successful `union()` reduces the component count. Repeating a union inside an existing component returns `false`.
 
-```
+```js
 import UnionFind from '@rawify/unionfind';
 
 const components = new UnionFind(6);
@@ -167,7 +167,7 @@ cannot produce a meaningful result without valid elements.
 
 An edge closes a cycle when both endpoints already have the same representative.
 
-```
+```js
 import UnionFind from '@rawify/unionfind';
 
 const components = new UnionFind(4);
@@ -188,7 +188,7 @@ Union-Find supports edge additions, not deletions. Removing edges requires rebui
 
 `reset()` restores every element to a singleton without replacing the backing typed array.
 
-```
+```js
 import UnionFind from '@rawify/unionfind';
 
 const components = new UnionFind(3);
