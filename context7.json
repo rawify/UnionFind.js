@@ -1,0 +1,6 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "UnionFind.js",
+  "description": "Disjoint-set data structure with path compression for connectivity and component queries.",
+  "excludeFolders": ["dist", "node_modules", "coverage", "_"]
+}

@@ -1,8 +1,8 @@
 {
     "name": "@rawify/unionfind",
-    "title": "UnionFind.js",
     "version": "0.0.2",
-    "description": "The RAW union find (disjoint set) library",
+    "type": "commonjs",
+    "description": "Disjoint-set union for integer IDs with union by size, path halving, component sizes, and reset",
     "homepage": "https://github.com/rawify/UnionFind.js",
     "bugs": "https://github.com/rawify/UnionFind.js/issues",
     "keywords": [
@@ -15,44 +15,37 @@
         "data structure",
         "algorithms"
     ],
-    "private": false,
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
     "main": "./dist/unionfind.js",
     "module": "./dist/unionfind.mjs",
-    "browser": "./dist/unionfind.min.js",
     "unpkg": "./dist/unionfind.min.js",
-    "types": "./unionfind.d.ts",
+    "jsdelivr": "./dist/unionfind.min.js",
+    "types": "./dist/unionfind.d.ts",
     "exports": {
         ".": {
             "import": {
-                "types": "./unionfind.d.mts",
+                "types": "./dist/unionfind.d.mts",
                 "default": "./dist/unionfind.mjs"
             },
             "require": {
-                "types": "./unionfind.d.ts",
+                "types": "./dist/unionfind.d.ts",
                 "default": "./dist/unionfind.js"
             },
-            "browser": {
-                "types": "./unionfind.d.ts",
-                "default": "./dist/unionfind.min.js"
-            },
             "default": {
-                "types": "./unionfind.d.ts",
+                "types": "./dist/unionfind.d.ts",
                 "default": "./dist/unionfind.js"
             }
         },
         "./package.json": "./package.json"
     },
-    "typesVersions": {
-        "<4.7": {
-            "*": [
-                "unionfind.d.ts"
-            ]
-        }
-    },
     "sideEffects": false,
     "repository": {
         "type": "git",
-        "url": "git@github.com:rawify/UnionFind.js.git"
+        "url": "git+ssh://git@github.com/rawify/UnionFind.js.git"
     },
     "funding": {
         "type": "github",
@@ -65,18 +58,21 @@
     },
     "license": "MIT",
     "engines": {
-        "node": "*"
-    },
-    "directories": {
-        "test": "tests"
+        "node": ">=20"
     },
     "scripts": {
-        "test": "mocha tests/*",
-        "build": "crude-build UnionFind"
+        "clean": "node scripts/clean.mjs",
+        "typecheck": "tsc --noEmit",
+        "build:types": "tsc -p tsconfig.build.json",
+        "build:js": "node scripts/build.mjs",
+        "build": "npm run clean && npm run build:types && npm run build:js",
+        "test:types": "tsc -p tests/types/tsconfig.json",
+        "test:runtime": "node --test tests/*.test.js tests/*.test.mjs",
+        "test": "npm run build && npm run test:types && npm run test:runtime",
+        "prepublishOnly": "npm test"
     },
     "devDependencies": {
-        "chai": "^5.2.1",
-        "crude-build": "^0.1.0",
-        "mocha": "^11.7.1"
+        "esbuild": "^0.25.9",
+        "typescript": "^5.9.2"
     }
 }

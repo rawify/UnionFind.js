@@ -1,2 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build and test output
+.types/
+coverage/
+*.tsbuildinfo
+
+# Local package archives and logs
+*.tgz
+npm-debug.log*
+
+# Operating system metadata
 .DS_Store
-node_modules
