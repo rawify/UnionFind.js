@@ -40,34 +40,34 @@ git clone https://github.com/rawify/UnionFind.js
 
 ### CommonJS
 
-```
+```js
 const UnionFind = require('@rawify/unionfind');
 const components = new UnionFind(10);
 ```
 
 ### ES modules
 
-```
+```js
 import UnionFind, { UnionFind as NamedUnionFind } from '@rawify/unionfind';
 const components = new UnionFind(10);
 ```
 
 ### Standalone browser script
 
-```
-&lt;script src="https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.0.2/dist/unionfind.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+```html
+<script src="https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.0.2/dist/unionfind.min.js"></script>
+<script>
 	const components = new UnionFind(10);
-&lt;/script&gt;
+</script>
 ```
 
 ### Native browser module
 
-```
-&lt;script type="module"&gt;
+```html
+<script type="module">
 	import UnionFind from 'https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.0.2/dist/unionfind.mjs';
 	const components = new UnionFind(10);
-&lt;/script&gt;
+</script>
 ```
 
 Storage is allocated once as an `Int32Array`. The package has no runtime
