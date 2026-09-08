@@ -1,6 +1,6 @@
 {
     "name": "@rawify/unionfind",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "type": "commonjs",
     "description": "Disjoint-set union for integer IDs with union by size, path halving, component sizes, and reset",
     "homepage": "https://github.com/rawify/UnionFind.js",

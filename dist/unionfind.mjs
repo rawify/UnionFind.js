@@ -17,7 +17,7 @@ var __privateWrapper = (obj, member, setter, getter) => ({
 
 // src/unionfind.ts
 /**
- * @license UnionFind.js v0.0.2
+ * @license UnionFind.js v0.1.0
  * https://github.com/rawify/UnionFind.js
  *
  * Copyright (c) 2025, Robert Eisele (https://raw.org/)
