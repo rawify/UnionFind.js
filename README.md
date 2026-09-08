@@ -55,7 +55,7 @@ const components = new UnionFind(10);
 ### Standalone browser script
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.0.2/dist/unionfind.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.1.0/dist/unionfind.min.js"></script>
 <script>
 	const components = new UnionFind(10);
 </script>
@@ -65,7 +65,7 @@ const components = new UnionFind(10);
 
 ```html
 <script type="module">
-	import UnionFind from 'https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.0.2/dist/unionfind.mjs';
+	import UnionFind from 'https://cdn.jsdelivr.net/npm/@rawify/unionfind@0.1.0/dist/unionfind.mjs';
 	const components = new UnionFind(10);
 </script>
 ```
