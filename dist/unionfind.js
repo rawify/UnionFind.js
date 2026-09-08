@@ -41,10 +41,10 @@ __export(unionfind_exports, {
 });
 module.exports = __toCommonJS(unionfind_exports);
 /**
- * @license UnionFind.js v0.1.0
+ * @license UnionFind.js v0.1.1
  * https://github.com/rawify/UnionFind.js
  *
- * Copyright (c) 2025, Robert Eisele (https://raw.org/)
+ * Copyright (c) 2026, Robert Eisele (https://raw.org/)
  * Licensed under the MIT license.
  */
 var _parentsOrSize, _componentCount, _UnionFind_instances, isValidIndex_fn, requireRoot_fn;
